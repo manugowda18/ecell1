@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+    <style>
+      .gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 0%;
+}
+
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+#myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg2:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+   /* Full height */
+   /* Enable scroll if needed */
+   /* Fallback color */
+   /* Black w/ opacity */ 
+ 
+}
+body{
+  background-image: url("img/2.jpg");
+  background-size: cover;
+}
+
+/* Modal Content (image) */
+.modal-content1 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content1,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: relative;
+  top: 10%;
+  left: 90%;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.title-heading {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.container_gallery {
+  width: clamp(30rem, 95%, 62.5rem);
+  padding-block: 1rem;
+  min-width: 22.5rem;
+}
+
+.container__flex-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* margin-inline: clamp(0px, (30rem - 100%) * 999, 1rem); */
+}
+
+.container__flex-flow > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999);
+}
+
+.card {
+  display: flex;
+  min-height: 300px;
+  min-width: 15rem;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  /* border-radius: clamp(0px, (40vw - 100%), 1rem); */
+  box-shadow: rgba(14, 17, 18, 0.642) 0px 2px 3px, rgba(22, 23, 23, 0.544) 0px 5px 8px,
+    rgba(15, 19, 19, 0.679) 0px 10px 12px;
+}
+
+.card > img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  transition: transform 700ms ease;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 600px) {
+  .title-heading {
+    margin-top: 20%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid rgb(168, 25, 200);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+    </style>
+ 
+    <link rel="shortcut icon" href="img/LOO.png" type="image/x-icon" />
+    <title>E-Cell | Gallery</title>
+  </head>
+
+  <body>
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <div class="my-3">
+      <center><img src="img/LOO.png" alt="" height="100px" width="100px" style="border: 3px solid rgb(6, 6, 6); border-radius: 50%; background-color: rgb(242, 243, 236);" ><h2 style="color: white;" >The Entreprenurs Cell</h2></center>
+      <h2 class="text-white title-heading" style="margin-top: 0px; " >
+        E-Cell,Gallery
+      </h2>
+    </div>
+    <div class="gallery">
+      <!-- <h2 class="engineer-logo text-white">Gallery</h2> -->
+      <main class="container_gallery">
+        <div class="container__flex-flow">
+          <div class="card">
+            <img
+              src="img/23.jpeg" height="34px" width="65px"
+              data-bigger-src="img/23.jpeg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="img/3.jpg"
+              data-bigger-src="img/3.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="img/hackathon89.png"
+              data-bigger-src="img/hackathon89.png"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="img/NIE (1).png"
+              data-bigger-src="img/NIE (1).png"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="img/Sjce.png"
+              data-bigger-src="img/Sjce.png"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="img/18.jpeg"
+              data-bigger-src="img/18.jpeg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="img/87.jpeg"
+              data-bigger-src="img/87.jpeg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+            src="img/12.png"
+            data-bigger-src="img/12.png"
+            id="myImg"
+            alt=""
+          />
+          </div>
+          <div class="card">
+            <img
+              src="img/image.jpg"
+              data-bigger-src="img/image.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+         <div class="card">
+            <img
+              src="img/4.jpg"
+              data-bigger-src="img/4.jpg"
+              id="myImg"
+              alt=""
+            />
+         </div>
+          <div class="card">
+            <img
+              src="img/4.jpg"
+              data-bigger-src="img/4.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+         <!--   <div class="card">
+            <img
+              src="./images/gallery/others/thumbnails/IMG_3308.jpg"
+              data-bigger-src="./images/gallery/others/IMG_3308.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="./images/gallery/others/thumbnails/IMG_7501.jpg"
+              data-bigger-src="./images/gallery/others/IMG_7501.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="./images/gallery/others/thumbnails/IMG_7778.jpg"
+              data-bigger-src="./images/gallery/others/IMG_7778.JPG"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="./images/gallery/others/thumbnails/IMG_7886.jpg"
+              data-bigger-src="./images/gallery/others/IMG_7886.JPG"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="./images/gallery/others/thumbnails/sky.jpg"
+              data-bigger-src="./images/gallery/others/sky.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              src="./images/gallery/others/thumbnails/umbrella.jpg"
+              data-bigger-src="./images/gallery/others/umbrella.jpg"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img src="../engineer.nitk.ac.in/img/4.jpg" id="myImg" alt="" />
+          </div>
+          <div class="card">
+            <img
+              src="./images/gallery/others/technites.JPG"
+              id="myImg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img src="./images/gallery/others/laser.JPG" id="myImg" alt="" />
+          </div>
+        </div> -->
+      </main>
+    </div>
+    <div id="myModal" class="modal1">
+      <span class="close" style="cursor: pointer; color:rgb(177, 180, 19)" >&times;</span>
+      <img id="modal-img" class="modal-content1" src="" />
+    </div>
+    
+
+
+    <!-- Scripts -->
+    <script>
+      // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("myImg");
+var modalImg = document.getElementById("modal-img");
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+// }
+
+document.addEventListener("click", (e) => {
+  const elem = e.target;
+  console.log(elem);
+  if (elem.id === "myImg") {
+    console.log("here");
+    modal.style.display = "block";
+    modalImg.src = elem.dataset.biggerSrc || elem.src;
+  }
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Local Scripts -->
+    <script>
+      window.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle("scrolling-active", windowPosition);
+      });
+
+      let btn = document.getElementById("nav-button");
+      let visible = false;
+      btn.addEventListener("click", () => {
+        if (visible == false) {
+          btn.style.border = "none";
+          document.getElementById("nav-menu").style.width = "100%";
+          visible = true;
+        } else {
+          btn.style.border = "none";
+          document.getElementById("nav-menu").style.width = "0%";
+          visible = false;
+        }
+      });
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script>
+         setTimeout(function(){
+             $('.loader_bg').fadeToggle();
+         }, 1500);
+     </script>
+  </body>
+</html>

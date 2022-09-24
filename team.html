@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Cell || TEAM</title>
+    <link rel="icon" href="img/Copy of E-Cell PESCE-modified.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url("img/1back.jpg");
+  background-size: cover;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+  
+.column {
+  margin-top: 2em;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  color: #1f003b;
+}
+.card {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 2.5em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+  height: 27em;
+  width: 20em;
+  border: 3px solid #a993ff;
+}
+section{
+  align-items: center;
+  justify-content: center;
+}
+.card .img-container {
+  width: 8em;
+  height: 8em;
+  background-color: #a993ff;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+  border-radius: 50%;
+}
+.card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-top: 0;
+}
+.card h3 {
+  font-weight: 500;
+}
+.card p {
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+.icons {
+  width: 50%;
+  min-width: 130px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between ;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+.card:hover {
+  background: linear-gradient(#6045ea, #8567f7);
+  color: #ffffff;
+}
+.card:hover .img-container {
+  transform: scale(1.15);
+}
+@media screen and (min-width: 720px) {
+  section {
+    padding: 1em 5em;
+}
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em;
+  }
+  .card {
+    padding: 5em 1em;
+    margin-left: 0;
+   margin-left: 0;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1em;
+  }
+}
+.ok h2{
+  text-align: center;
+}
+#centre{
+  text-align: center;
+}
+.ok p{
+  margin-top: 0px;
+}
+.ok img{
+  border-radius: 50%;
+  border: 5px solid #a993ff;
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #6045ea;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+h6{
+  margin-top: 0;
+  font-size: 9px;
+}
+footer{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #8567f7;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <div class="ok" id="centre">
+      <img src="img/blackboo.png" alt="" class="" height="125px" width="125px">
+      <p>The Entrepreneur’s Cell,PESCE</p>
+     <h2>MEET OUR TEAM</h2> 
+    </div>
+    <section>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/principal.png" />
+            </div>
+            <h3>Dr. Mahalingegowda </h3>
+              <p>Principal & Chair person</p>
+              <h6>“If you do the things that are easier first, then you can actually make a lot of progress.”</h6>
+              <br><h6>-Principal & Chair person,E-Cell PESCE<br>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </h6>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/prisedent.png" />
+            </div>
+            <h3>Dr. Vinay S </h3>
+              <p>Prisednet,E-Cell</p>
+              <h6>“A hard thing is done by figuring out how to start.”</h6>
+              <br><h6>-Prisednet,E-Cell PESCE<br>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:vinay@pesce.ac.in">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </h6>
+          </div>
+        </div>
+        <div>
+
+      <div class="row">
+        <h1></h1>
+      </div>
+  <!----    <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/CHANDAN1.png" />
+            </div>
+            <h3>Chandan M </h3>
+            <p>Research & Development</p>
+            <div class="icons">
+              <a href="https://www.instagram.com/c_handan_m/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/chandan-m-00a4111a0/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:chandanchandan9616@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/CHANDAN1.png" />
+            </div>
+            <h3>Chandan M </h3>
+            <p>Overall Co-Ordinator</p>
+            <div class="icons">
+              <a href="https://www.instagram.com/c_handan_m/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/chandan-m-00a4111a0/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:chandanchandan9616@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+        
+       
+          <div class="column">
+            <div class="card">
+              <div class="img-container">
+                <img src="img/CHANDAN1.png" />
+              </div>
+              <h3>Chandan M </h3>
+              <p>Overall Co-Ordinator</p>
+              <div class="icons">
+                <a href="https://www.instagram.com/c_handan_m/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/chandan-m-00a4111a0/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:chandanchandan9616@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+       
+          <H5>.</H5>
+        </div>-->
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/siddesh.png" />
+            </div>
+            <h3>Siddesh Kumar N M </h3>
+              <p>Convener,E-Cell</p>
+              <h6>“To any entrepreneur: if you want to do it, do it now. If you don’t, you’re going to regret it.”.</h6>
+              <br><h6>-Convener,E-Cell PESCE<br>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:siddeshkumarnm@pesce.ac.in">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </h6>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="img/ramesh.png" />
+            </div>
+            <h3>Ramesh Kurbet </h3>
+              <p>Mentor,E-Cell</p>
+              <h6>“I don’t have big ideas. I sometimes have small ideas, which seem to work out.”.</h6>
+              <br><h6>-Mentor,E-Cell PESCE<br>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:rameshkurbet031@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </h6>
+          </div>
+        </div>
+        <div>
+        <!-- Column 1-->
+        <!-- Column 1-->
+       
+          <div class="column">
+            <div class="card">
+              <div class="img-container">
+                <img src="img/chethan.png" />
+              </div>
+              <h3>Chetan Kumar V </h3>
+              <p>Mentor,E-Cell</p>
+              <h6>“The earlier you start, the more time you have to mess up.”.</h6>
+              <br><h6>-Mentor,E-Cell PESCE<br>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:vchetan@pesce.ac.in">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                </h6>
+            </div>
+            </div>
+          </div>
+          <!-- Column 1-->
+        
+          <H5></H5>
+        </div>
+        <div class="row">
+          <div class="column">
+              <div class="card">
+                <div class="img-container">
+                  <img src="img/MANOJ.png" />
+                </div>
+                <h3>Manojgowda K S </h3>
+                <p>Overall Co-Ordinator</p>
+                <div class="icons">
+                  <a href="https://www.instagram.com/_.manojgowda._/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:manumanojgowda570@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+          </div>
+          
+          
+          <div class="column">
+            <div class="card">
+              <div class="img-container">
+                <img src="img/CHANDAN1.png" />
+              </div>
+              <h3>Chandan M </h3>
+              <p>Overall Co-Ordinator</p>
+              <div class="icons">
+                <a href="https://www.instagram.com/c_handan_m/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/chandan-m-00a4111a0/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:chandanchandan9616@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <div class="img-container">
+                  <img src="img/rakshitha.JPG" />
+                </div>
+                <h3>Rakshitha M N </h3>
+                <p>Corporate Relation Manager</p>
+                <div class="icons">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/rakshitha-m-n-aa584b242">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:rakshithamn1602@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="img-container">
+                  <img src="img/anivika.jpg" />
+                </div>
+                <h3>Anvika </h3>
+                <p>Corporate Relation Manager</p>
+                <div class="icons">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/anvika-anvika-836067214">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:itsmeanvikaashok@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+            <!-- Column 1-->
+            <!-- Column 1-->
+           
+              <div class="column">
+                <div class="card">
+                  <div class="img-container">
+                    <img src="img/mery.jpeg" />
+                  </div>
+                  <h3> Meryl Freeda Dcruz</h3>
+                  <p> Event & PR Manager</p>
+                  <div class="icons">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/meryl-freeda-dcruz-38a979191/">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:meryldcruz951@gmail.com">
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Column 1-->
+            
+              
+         
+            <!-- Column 1-->
+          
+            <H5>.</H5>
+          </div>
+
+          <!----->
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <div class="img-container">
+                  <img src="img/hemashree.jpg" />
+                </div>
+                <h3>Hemashree SS </h3>
+                <p>Startup services Manager</p>
+                <div class="icons">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/hemashree-ss-64a957242">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:hemaheggade@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="img-container">
+                  <img src="img/mithun-modified.png" />
+                </div>
+                <h3>Mithun R P </h3>
+                <p>Tech Manager</p>
+                <div class="icons">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/mithunrp">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:mithunrp07@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+            <!-- Column 1-->
+            <!-- Column 1-->
+           
+              <div class="column">
+                <div class="card">
+                  <div class="img-container">
+                    <img src="img/Lakshmikirancm.jpg" />
+                  </div>
+                  <h3>Lakshmikiran C M </h3>
+                  <p>Student relation & Outreach Manager</p>
+                  <div class="icons">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:lakshmikirancm08@gmail.com">
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Column 1-->
+            
+              <H5>.</H5>
+            </div>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <div class="img-container">
+                    <img src="img/boomika.jpeg" />
+                  </div>
+                  <h3>Bhoomika H L  </h3>
+                  <p>Media & Outreach Manager</p>
+                  <div class="icons">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bhoomika-h-l-775225195">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:tvbhumi@gmail.com">
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <div class="img-container">
+                    <img src="img/deeraj.jpg" />
+                  </div>
+                  <h3>Dheeraj N U </h3>
+                  <p>Operational Manager</p>
+                  <div class="icons">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dheeraj-n-u-317b461ab">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:dheerajju4@gmail.com">
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+              <!-- Column 1-->
+              <!-- Column 1-->
+             
+                <div class="column">
+                  <div class="card">
+                    <div class="img-container">
+                      <img src="img/nisarga.png" />
+                    </div>
+                    <h3>Nisarga R </h3>
+                    <p>Operational Manager</p>
+                    <div class="icons">
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/nisarga-r-1b24991a6">
+                        <i class="fab fa-linkedin"></i>
+                      </a>
+                      <a href="mailto:nisarganishu437@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column 1-->
+              
+                <H5>.</H5>
+              </div>
+              <!---->
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <div class="img-container">
+                      <img src="img/suraj.jpeg" />
+                    </div>
+                    <h3>Suraj R</h3>
+                    <p>Finance Manager </p>
+                    <div class="icons">
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                      </a>
+                      <a href="mailto:suraj8080@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <div class="img-container">
+                      <img src="img/sinchana.jpg" />
+                    </div>
+                    <h3>Sinchana  K P </h3>
+                    <p>Finance Manager</p>
+                    <div class="icons">
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/sinchana-k-p-01955724b">
+                        <i class="fab fa-linkedin"></i>
+                      </a>
+                      <a href="mailto:sinchanakp13@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                <!-- Column 1-->
+                <!-- Column 1-->
+               
+                  <div class="column">
+                    <div class="card">
+                      <div class="img-container">
+                        <img src="img/vijay.jpg" />
+                      </div>
+                      <h3>VIJAY KUMAR R</h3>
+                      <p>Marketing Manager</p>
+                      <div class="icons">
+                        <a href="#">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vijay-kumar-r-a97697218">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:vijaykumarr1301@gmail.com">
+                          <i class="fas fa-envelope"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Column 1-->
+                
+                  <H5>.</H5>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <div class="card">
+                      <div class="img-container">
+                        <img src="img/bheem.png" />
+                      </div>
+                      <h3>Bheemkumar Haloor</h3>
+                      <p>Marketing Manager</p>
+                      <div class="icons">
+                        <a href="#">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/bheemkumar-haloor-5a0929236">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:bheem16001@gmail.com">
+                          <i class="fas fa-envelope"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                      <div class="img-container">
+                        <img src="img/aniruh.jpg" />
+                      </div>
+                      <h3>Aniruddh P Koundinya</h3>
+                      <p> Grapic Design</p>
+                      <div class="icons">
+                        <a href="#">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aniruddh-koundinya">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:aniruddhp559@gmail.com">
+                          <i class="fas fa-envelope"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                  <!-- Column 1-->
+                  <!-- Column 1-->
+                 
+                    <div class="column">
+                      <div class="card">
+                        <div class="img-container">
+                          <img src="img/shasahak.jpg" />
+                        </div>
+                        <h3>Shashank N</h3>
+                        <p>Grapic Design</p>
+                        <div class="icons">
+                          <a href="#">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/in/shashank-n-1b9559213">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:shashankn4991@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Column 1-->
+                  
+                    <H5>.</H5>
+                  </div>
+                  <div class="row">
+                    <div class="column">
+                      <div class="card">
+                        <div class="img-container">
+                          <img src="img/monika.jpg" />
+                        </div>
+                        <h3>Monika Raj M R</h3>
+                        <p>Cultural Manager</p>
+                        <div class="icons">
+                          <a href="#">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/in/monika-raj-4895a3245">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:monikarajmr06@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <div class="img-container">
+                          <img src="img/prathiksha.jpg" />
+                        </div>
+                        <h3>Prathiksha Y </h3>
+                        <p>Cultural Manager</p>
+                        <div class="icons">
+                          <a href="#">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/in/prathiksha-y-41a7a6249">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:prathikshay73@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                    <!-- Column 1-->
+                    <!-- Column 1-->
+                   
+                      <div class="column">
+                        <div class="card">
+                          <div class="img-container">
+                            <img src="img/madhav.jpg" />
+                          </div>
+                          <h3>Madhav Adithya </h3>
+                          <p>Research & Development</p>
+                          <div class="icons">
+                            <a href="#">
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/madhav-adithya-6318b4233">
+                              <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:madhavadithya39@gmail.com">
+                              <i class="fas fa-envelope"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Column 1-->
+                    
+                      <H5>.</H5>
+                    </div>
+
+                    <div class="row">
+                      <div class="column">
+                        <div class="card">
+                          <div class="img-container">
+                            <img src="img/prajwal.jpg" />
+                          </div>
+                          <h3>Prajwal M D </h3>
+                          <p>Research & Development</p>
+                          <div class="icons">
+                            <a href="#">
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/prajwal-m-d-7aa507233">
+                              <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:prajju.18gryphon@gmail.com">
+                              <i class="fas fa-envelope"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                          <div class="img-container">
+                            <img src="img/pratham.jpg" />
+                          </div>
+                          <h3>Pratham </h3>
+                          <p>Research & Development</p>
+                          <div class="icons">
+                            <a href="#">
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pratham-l-ab17b520a">
+                              <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:pratham.l0014@gmail.com">
+                              <i class="fas fa-envelope"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                      <!-- Column 1-->
+                      <!-- Column 1-->
+                     
+                        <div class="column">
+                          <div class="card">
+                            <div class="img-container">
+                              <img src="img/manju.png" />
+                            </div>
+                            <h3>Manjunath k p</h3>
+                            <p>Research & Development</p>
+                            <div class="icons">
+                              <a href="#">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                              <a href="mailto:kp36961@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="column">
+                          <div class="card">
+                            <div class="img-container">
+                              <img src="img/swthi.jpg" />
+                            </div>
+                            <h3>Swathi </h3>
+                            <p>Research & Development</p>
+                            <div class="icons">
+                              <a href="#">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Column 1-->
+                        <H5>.</H5>
+                      </div>
+        <!-- Column 1-->
+        </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+     <h4> Created by <a href="">🧿</a>|| E-Cell,PESCE Mandya</h4>
+     </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+</html>
